@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 52771473}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52771472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9213467, y: -1.8364232, z: 0}
+  m_LocalPosition: {x: -4.79, y: -1.8364232, z: 0}
   m_LocalScale: {x: 4.4490056, y: 4.4490056, z: 4.4490056}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1847,6 +1847,7 @@ GameObject:
   - component: {fileID: 1890779290}
   - component: {fileID: 1890779294}
   - component: {fileID: 1890779293}
+  - component: {fileID: 1890779295}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1912,7 +1913,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f7155fac0d464a04796941cd3fbbfaac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1932,7 +1933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890779289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.62, y: -3.0545, z: 0}
+  m_LocalPosition: {x: -8.09, y: -3.0545, z: 0}
   m_LocalScale: {x: 5.6868477, y: 4.4864655, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1985,3 +1986,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53, y: 0.57}
   m_EdgeRadius: 0
+--- !u!114 &1890779295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890779289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d320611e7cd34be42a0d2040068d8094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 6
