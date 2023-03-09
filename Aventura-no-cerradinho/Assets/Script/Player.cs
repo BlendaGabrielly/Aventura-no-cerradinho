@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float Velocidade = 1f;
+    public float velocidade = 8f;
+    public float forcaPulo = 8f;
     
 
 
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         movimentos();
+        pulo();
         
     }
 
@@ -31,11 +33,18 @@ public class Player : MonoBehaviour
     void movimentos()
     {
         Vector3 movimento = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movimento * Time.deltaTime * Velocidade;
+        transform.position += movimento * Time.deltaTime * velocidade;
 
 
+    }
 
+    void pulo()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            rig.AddForce(new Vector2(0f,forcaPulo), ForceMode2D.Impulse);
 
+        }
     }
 
 
