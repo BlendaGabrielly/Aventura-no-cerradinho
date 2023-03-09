@@ -4,20 +4,44 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float Velocidade = 1f;
+    
+
+
+
+    private Rigidbody2D rig;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        rig = GetComponent<Rigidbody2D>();
+   
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        movimentos();
         
     }
-     void OnCollisionEnter2D(Collision2D collision){
-       if(collision.gameObject.tag=="Enemy"){
-         Destroy(gameObject);
-       }
-     }
+
+
+    void movimentos()
+    {
+        Vector3 movimento = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        transform.position += movimento * Time.deltaTime * Velocidade;
+
+
+
+
+    }
+
+
+
+
+
+    
+
 }
