@@ -32,19 +32,17 @@ public class Player : MonoBehaviour
     void movimentos()
     {
        
-
-        if (estaPulando)
-        {
+       
             Vector3 movimento = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
             transform.position += movimento * Time.deltaTime * velocidade;
 
-        }
+        
 
     }
 
     void pulo()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !estaPulando)
         {
             rig.AddForce(new Vector2(0f,forcaPulo), ForceMode2D.Impulse);
             
@@ -52,22 +50,25 @@ public class Player : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 8)
-        {
+        
 
+        if (collision.gameObject.layer == 7)
+        {
+            
             estaPulando = false;
            
         }
         
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 7)
         {
             estaPulando = true;
+            
 
         }
 
