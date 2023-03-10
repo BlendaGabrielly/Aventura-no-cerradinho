@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
-        Target=GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
