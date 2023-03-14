@@ -38,15 +38,23 @@ public class Player : MonoBehaviour
             Vector3 movimento = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
             transform.position += movimento * Time.deltaTime * velocidade;
 
-        if(Input.GetAxis("Horizontal") >= 0)
+        if(Input.GetAxis("Horizontal") > 0)
         {
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            anim.SetBool("Andando", true);
+        }
+
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
             anim.SetBool("Andando", true);
         }
         else
         {
             anim.SetBool("Andando", false);
         }
-            
+
+
         
 
     }
