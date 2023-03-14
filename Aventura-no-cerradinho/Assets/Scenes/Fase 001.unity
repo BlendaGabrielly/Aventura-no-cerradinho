@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84238665}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Troncos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 238943996}
   - component: {fileID: 238943998}
   - component: {fileID: 238943997}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto seco (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 362718898}
   - component: {fileID: 362718900}
   - component: {fileID: 362718899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto seco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1703,7 +1703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 729561696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbustos secos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1861,7 +1861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &757491952
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 818293502}
   - component: {fileID: 818293504}
   - component: {fileID: 818293503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto marrom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &886073688
 Transform:
   m_ObjectHideFlags: 0
@@ -2382,7 +2382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1122274433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pedras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,7 +2498,7 @@ GameObject:
   - component: {fileID: 1260505681}
   - component: {fileID: 1260505680}
   - component: {fileID: 1260505679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2975,7 +2975,7 @@ GameObject:
   - component: {fileID: 1462529908}
   - component: {fileID: 1462529907}
   - component: {fileID: 1462529909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto marrom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25458,7 +25458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883742752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbustos marrons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25492,7 +25492,7 @@ GameObject:
   - component: {fileID: 1894718757}
   - component: {fileID: 1894718759}
   - component: {fileID: 1894718758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto seco (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25678,7 +25678,7 @@ GameObject:
   - component: {fileID: 2045733413}
   - component: {fileID: 2045733415}
   - component: {fileID: 2045733414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\xC1rvore cortada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25859,7 +25859,7 @@ GameObject:
   - component: {fileID: 2060040260}
   - component: {fileID: 2060040262}
   - component: {fileID: 2060040261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arbusto seco (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26039,6 +26039,10 @@ PrefabInstance:
     - target: {fileID: 6407600057204119672, guid: 75b2164342dcb274681d417eb0f9a9f8, type: 3}
       propertyPath: forcaPulo
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407600057204119673, guid: 75b2164342dcb274681d417eb0f9a9f8, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407600057204119674, guid: 75b2164342dcb274681d417eb0f9a9f8, type: 3}
       propertyPath: m_SortingOrder
