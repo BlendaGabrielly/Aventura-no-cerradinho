@@ -17,10 +17,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Vector2.Distance(transform.position,Target.position)<Stop){
+
         transform.position=Vector3.MoveTowards(transform.position,Target.position,Speed*Time.deltaTime);
     }
-//}
+     void OnCollisionEnter2D(Collision2D collision){
+         if(collision.gameObject.tag=="Player"){
+         GameController.insta.ShowGameOver();
+         Destroy(gameObject);
+      }
+     }
      
 }
 

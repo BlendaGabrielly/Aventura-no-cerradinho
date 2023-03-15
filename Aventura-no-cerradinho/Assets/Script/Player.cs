@@ -90,6 +90,10 @@ public class Player : MonoBehaviour
             anim.SetBool("Pulando", false);
 
         }
+         if(collision.gameObject.tag=="Enemy"){
+         GameController.insta.ShowGameOver();
+         Destroy(gameObject);
+      }
         
     }
 
