@@ -4,6 +4,6 @@ Esse jogo é o resultado de um projeto de iniciação cientifica feito no Instit
 
 Autor: Mateus Barros Macedo
 
-Orientador: Cleon Xavier 
+Orientador: Cleon Xavier
 
-Colaboradores: Blenda Gabrielly, Denis Bruno
+Colaboradores: Blenda Gabrielly, Denis Bruno, Newarney Torrezao
