@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     public float velocidade = 8f;
@@ -12,12 +13,26 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
 
+    public int max_life=3;
+    private int currentLife;
+    public float minspeed=10f;
+    public float maxspeed=30f;
+    private bool invincible=false;
+    static int blinkValue ;
+    public float invincibleTime;
+    private UIManager iuManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
 
         rig = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();    
+        anim = GetComponent<Animator>(); 
+        currentLife=max_life; 
+        velocidade=minspeed;
+        blinkValue=Shader.PropertyToID("_BlinkingValue");
+        iuManager=FindObjectOfType<UIManager>();
    
 
     }
@@ -106,6 +121,45 @@ public class Player : MonoBehaviour
 
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(invincible){
+            return;
+        }
+        if(collider.gameObject.tag=="Arbusto"){
+             currentLife--;
+             iuManager.UpdateLives(currentLife);
+             anim.SetTrigger("Andando");
+             velocidade=0;
+             if(currentLife<=0){
+               GameController.insta.ShowGameOver();
+             }else{
+               StartCoroutine(Blinking(invincibleTime));
+             }
+        }
+
+    }
+    IEnumerator Blinking(float time){
+      invincible=true;
+      float timer=0;
+      float currentBlinking=1f;
+      float lastBlink=0;
+      float blinkPeriod=0.1f;
+      yield return new WaitForSeconds(1f);
+      velocidade=minspeed;
+      while(timer<time&&invincible){
+         Shader.SetGlobalFloat(blinkValue,currentBlinking);
+         yield return null;
+         timer+=Time.deltaTime;
+         lastBlink+=Time.deltaTime;
+         if(blinkPeriod<lastBlink){
+            lastBlink=0;
+            currentBlinking=1f-currentBlinking;
+         }
+     }
+     Shader.SetGlobalFloat(blinkValue,0);
+     invincible=false;
     }
 
 
