@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3403026236314725490}
   - component: {fileID: 3151194719058819038}
   - component: {fileID: 6277402303605787279}
-  - component: {fileID: 2538277876048166265}
+  - component: {fileID: 4812849265731832737}
   m_Layer: 7
   m_Name: Arbusto marrom
   m_TagString: Arbusto
@@ -246,8 +246,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!58 &2538277876048166265
-CircleCollider2D:
+--- !u!61 &4812849265731832737
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -259,6 +259,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000009536743, y: 0.000000059604645}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Size: {x: 0.36, y: 0.33}
+  m_EdgeRadius: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -96,7 +97,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+      
 
         if (collision.gameObject.layer == 7)
         {
@@ -105,8 +106,8 @@ public class Player : MonoBehaviour
             anim.SetBool("Pulando", false);
 
         }
-         if(collision.gameObject.tag=="Enemy"){
-         GameController.insta.ShowGameOver();
+         if(collision.gameObject.tag== "Enemy"){
+         //GameController.insta.ShowGameOver();
          Destroy(gameObject);
       }
         
@@ -124,15 +125,16 @@ public class Player : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-        if(invincible){
-            return;
-        }
+        //if(invincible){
+           // return;
+        //}
         if(collider.gameObject.tag=="Arbusto"){
              currentLife--;
              iuManager.UpdateLives(currentLife);
-             anim.SetTrigger("Andando");
-             velocidade=0;
-             if(currentLife<=0){
+
+            // anim.SetTrigger("Andando");
+            velocidade = (float)(velocidade - (velocidade * 0.2));
+            if (currentLife<=0){
                GameController.insta.ShowGameOver();
                 Destroy(gameObject);
              }else{
@@ -141,6 +143,11 @@ public class Player : MonoBehaviour
         }
 
     }
+
+
+    
+        
+       
     IEnumerator Blinking(float time){
       invincible=true;
       float timer=0;

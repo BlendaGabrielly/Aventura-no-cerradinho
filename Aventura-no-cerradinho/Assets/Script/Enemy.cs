@@ -21,10 +21,13 @@ public class Enemy : MonoBehaviour
         transform.position=Vector3.MoveTowards(transform.position,Target.position,Speed*Time.deltaTime);
     }
      void OnCollisionEnter2D(Collision2D collision){
-         if(collision.gameObject.tag=="Player"){
-         GameController.insta.ShowGameOver();
-         Destroy(gameObject);
-      }
+
+
+        if (collision.gameObject.tag == "Player") {
+            GameController.insta.ShowGameOver();
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
      }
      
 }
