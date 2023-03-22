@@ -134,6 +134,7 @@ public class Player : MonoBehaviour
              velocidade=0;
              if(currentLife<=0){
                GameController.insta.ShowGameOver();
+                Destroy(gameObject);
              }else{
                StartCoroutine(Blinking(invincibleTime));
              }
