@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    //public static GameController insta;
+    public string lvlName;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -17,11 +17,11 @@ public class Menu : MonoBehaviour
     {
         
     }
-    public void Restart(string lvlName)
+    public void Restart()
     {
         Debug.Log("clicou");
         SceneManager.LoadScene(lvlName);
-        
     }
 
+    
 }
