@@ -14,8 +14,8 @@ public class Historia : MonoBehaviour
     }
     void Update()
     {
-       if(index>=4){
-         index=4; 
+       if(index>=14){
+         index=14; 
     }
        if(index<=0){
          index=0;
