@@ -169,11 +169,4 @@ public class Player : MonoBehaviour
      Shader.SetGlobalFloat(blinkValue,0);
      invincible=false;
     }
-
-
-
-
-
-
-
 }
