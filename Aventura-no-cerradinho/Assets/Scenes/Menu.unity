@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a12c5c3720ecad4da2313baeec58dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlName: Fase 1
+  lvlName: Historia
 --- !u!4 &113127867
 Transform:
   m_ObjectHideFlags: 0

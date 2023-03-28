@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Historia : MonoBehaviour
 {
     public GameObject[] historia;
     int index;
-
+    public string lvlName; 
     void Start()
     {
         index=0;
@@ -29,6 +30,7 @@ public class Historia : MonoBehaviour
     for(int i=0;i<historia.Length;i++){
         historia[i].SetActive(false);
         historia[index].SetActive(true);
+        Restart();
     }
     Debug.Log(index);
 }
@@ -40,4 +42,9 @@ public class Historia : MonoBehaviour
     }
     Debug.Log(index);
  }
+  public void Restart()
+    {
+        Debug.Log("clicou");
+        SceneManager.LoadScene(lvlName);
+    }
 }
