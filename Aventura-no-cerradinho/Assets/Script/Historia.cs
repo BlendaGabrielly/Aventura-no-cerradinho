@@ -16,24 +16,40 @@ public class Historia : MonoBehaviour
     void Update()
     {
        if(index>=14){
-         index=14; 
+            index = 14;
+            startGame();
     }
-       if(index<=0){
-         index=0;
+       if(index<0){
+            index = 0;
+       
        }
        if(index==0){
+
           historia[0].SetActive(true);
        }
     }
- public void Next(){
-    index+=1;
-    for(int i=0;i<historia.Length;i++){
-        historia[i].SetActive(false);
-        historia[index].SetActive(true);
-        Restart();
+    public void Next()
+    {
+        index += 1;
+        for (int i = 0; i < historia.Length; i++)
+        {
+
+            historia[i].SetActive(false);
+            historia[index].SetActive(true);
+            //Restart();
+        }
+        Debug.Log(index);
     }
-    Debug.Log(index);
+
+    public void startGame()
+    {
+        Debug.Log("clicou");
+        SceneManager.LoadScene(lvlName);
+    }
+
 }
+
+/*
  public void Previous(){
      index-=1;
     for(int i=0;i<historia.Length;i++){
@@ -41,10 +57,5 @@ public class Historia : MonoBehaviour
         historia[index].SetActive(true);
     }
     Debug.Log(index);
- }
-  public void Restart()
-    {
-        Debug.Log("clicou");
-        SceneManager.LoadScene(lvlName);
-    }
-}
+ }*/
+  
