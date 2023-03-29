@@ -47,9 +47,9 @@ public class Historia : MonoBehaviour
         SceneManager.LoadScene(lvlName);
     }
 
-}
 
-/*
+
+
  public void Previous(){
      index-=1;
     for(int i=0;i<historia.Length;i++){
@@ -57,5 +57,6 @@ public class Historia : MonoBehaviour
         historia[index].SetActive(true);
     }
     Debug.Log(index);
- }*/
+ }
   
+}
