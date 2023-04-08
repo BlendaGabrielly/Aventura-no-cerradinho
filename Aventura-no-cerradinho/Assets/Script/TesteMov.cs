@@ -36,13 +36,14 @@ public class TesteMov : MonoBehaviour
     {
         movHorizontal = Input.GetAxis("Horizontal");
         Movimento();
+        Pulo();
     }
 
 
 
     private void Movimento()
     {
-        Pulo();
+        
 
         corpoPers.velocity = new Vector3(movHorizontal * velocidadeMov, corpoPers.velocity.y);
 
