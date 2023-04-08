@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public GameObject gameOver;
     public static GameController insta;
+
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,19 @@ public class GameController : MonoBehaviour
     {
         
     }
+
+
+
    public void ShowGameOver(){
      gameOver.SetActive(true);
    }
 
 
-   public void Restart(string lvlName ){
-    SceneManager.LoadScene(lvlName);
-   }
+   //public void Restart(string lvlName ){
+    public void Restart()
+    {
+        //SceneManager.LoadScene(lvlName);
+        //Debug.Log(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

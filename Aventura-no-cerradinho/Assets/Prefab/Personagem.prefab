@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 841493614416202774}
   - component: {fileID: 841493614416202775}
   - component: {fileID: 841493614416202772}
+  - component: {fileID: 7717145196724866960}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Untagged
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841493614416202984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcba7ea96f53a14b88fb2796be67434, type: 3}
   m_Name: 
@@ -172,3 +173,19 @@ MonoBehaviour:
   minspeed: 10
   maxspeed: 30
   invincibleTime: 0
+--- !u!114 &7717145196724866960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841493614416202984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff889d9491a81c4ab6ef637fbdb2844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movHorizontal: 0
+  velocidadeMov: 0
+  forcaPulo: 0
+  corpoPers: {fileID: 0}

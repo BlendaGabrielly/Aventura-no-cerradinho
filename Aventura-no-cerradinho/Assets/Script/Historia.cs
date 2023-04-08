@@ -44,7 +44,7 @@ public class Historia : MonoBehaviour
     public void startGame()
     {
         Debug.Log("clicou");
-        SceneManager.LoadScene(lvlName);
+        SceneManager.LoadScene("Fase 1");
     }
 
 

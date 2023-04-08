@@ -127,10 +127,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 524
-        width: 239
+        width: 160
         height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,12 +146,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_1
       rect:
         serializedVersion: 2
-        x: 239
+        x: 273
         y: 524
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,12 +167,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_2
       rect:
         serializedVersion: 2
-        x: 478
+        x: 534
         y: 524
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_3
       rect:
         serializedVersion: 2
-        x: 717
+        x: 797
         y: 524
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,10 +211,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 263
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,12 +230,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_5
       rect:
         serializedVersion: 2
-        x: 239
+        x: 272
         y: 263
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,12 +251,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_6
       rect:
         serializedVersion: 2
-        x: 478
-        y: 263
-        width: 239
+        x: 532
+        y: 262
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,12 +272,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_7
       rect:
         serializedVersion: 2
-        x: 717
-        y: 263
-        width: 239
+        x: 797
+        y: 262
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,10 +295,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 2
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,12 +314,12 @@ TextureImporter:
       name: PikPng.com_video-game-character-png_1877811_9
       rect:
         serializedVersion: 2
-        x: 239
+        x: 273
         y: 2
-        width: 239
+        width: 160
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
