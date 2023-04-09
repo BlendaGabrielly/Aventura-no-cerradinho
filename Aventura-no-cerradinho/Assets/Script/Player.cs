@@ -110,10 +110,6 @@ public class Player : MonoBehaviour
          //GameController.insta.ShowGameOver();
          Destroy(gameObject);
       }
-       if (collision.gameObject.tag == "Lago") {
-            GameController.insta.ShowGameOver();
-            Destroy(gameObject);
-        }
         
     }
 

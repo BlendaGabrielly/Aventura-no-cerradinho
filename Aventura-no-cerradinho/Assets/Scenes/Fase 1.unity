@@ -125892,6 +125892,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8862273436376772613, guid: ac5f911790703944e80016c0caea8661, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862273436376772635, guid: ac5f911790703944e80016c0caea8661, type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac5f911790703944e80016c0caea8661, type: 3}
 --- !u!4 &911829168 stripped
@@ -130344,6 +130352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Madeira
       objectReference: {fileID: 0}
+    - target: {fileID: 8862273436376772609, guid: ac5f911790703944e80016c0caea8661, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8862273436376772612, guid: ac5f911790703944e80016c0caea8661, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -130387,6 +130399,14 @@ PrefabInstance:
     - target: {fileID: 8862273436376772612, guid: ac5f911790703944e80016c0caea8661, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862273436376772613, guid: ac5f911790703944e80016c0caea8661, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862273436376772635, guid: ac5f911790703944e80016c0caea8661, type: 3}
+      propertyPath: time
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8862273436376772608, guid: ac5f911790703944e80016c0caea8661, type: 3}
