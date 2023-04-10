@@ -9,8 +9,8 @@ public class LagoTest : MonoBehaviour
 
         if (collision.gameObject.tag == "Player") {
             GameController.insta.ShowGameOver();
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            
         }
      }
 }

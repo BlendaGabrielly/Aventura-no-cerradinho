@@ -16,7 +16,7 @@ public class Madeira : MonoBehaviour
       if(collision.gameObject.tag=="Player"){
           Invoke("Falling",time);
       }
-   }
+    }
    void OnTriggerEnter2D(Collider2D collider){
          if(collider.gameObject.tag=="Lago"){
           Destroy(gameObject);

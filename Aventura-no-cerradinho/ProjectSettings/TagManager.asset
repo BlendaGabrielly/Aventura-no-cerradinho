@@ -8,6 +8,7 @@ TagManager:
   - Jogador
   - Arbusto
   - Lago
+  - madeira
   layers:
   - Default
   - TransparentFX
