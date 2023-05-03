@@ -13,8 +13,9 @@ public class TesteMov : MonoBehaviour
     [SerializeField] private float movHorizontal;
     [SerializeField] private float velocidadeMov;
     [SerializeField] private float forcaPulo;
- 
-    [SerializeField] private int vidasAtual;
+    [SerializeField] private bool segundoPulo, conta_pulo;
+
+    [SerializeField] private int vidasAtual ;
     private bool estaPulando;
 
     // Start is called before the first frame update
@@ -70,28 +71,63 @@ public class TesteMov : MonoBehaviour
 
     private void Pulo()
     {
+        
         if (Input.GetButtonDown("Jump"))
         {
+
+            
+
+
             if (!estaPulando)
             {
                 corpoPers.AddForce(new Vector2(corpoPers.velocity.x, forcaPulo), ForceMode2D.Impulse);
-
             }
-           
+            else
+            {
+                conta_pulo = true;
+            }
+            /*else if (segundoPulo)
+            {
+
+                corpoPers.AddForce(new Vector2(0f, (forcaPulo/2)), ForceMode2D.Impulse);
+                segundoPulo = false;
+
+            }*/
+
+
+            
 
 
         }
     }
 
+
+    void bufferDePulo()
+    {
+
+        if (conta_pulo)
+        {
+
+            corpoPers.AddForce(new Vector2(corpoPers.velocity.x, forcaPulo), ForceMode2D.Impulse);
+            conta_pulo = false;
+
+        }
+        
+
+
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
         //Obs: todos os colizores que estejam relacionados a base de pulo devem estar na layer 7
         if (collision.gameObject.layer == 7)
         {
             estaPulando = false;
+            bufferDePulo();
 
         }
-
 
     }
 
@@ -102,6 +138,7 @@ public class TesteMov : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             estaPulando = true;
+            segundoPulo = true;
         }
 
     }
@@ -121,6 +158,7 @@ public class TesteMov : MonoBehaviour
             //velocidade = (float)(velocidade - (velocidade * 0.2));
             if (vidasAtual <= 0)
             {
+                velocidadeMov = velocidadeMov - ((10 * velocidadeMov) / 100);
 
                 GameController.insta.ShowGameOver();
                 Destroy(this.gameObject);
