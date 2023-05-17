@@ -8,7 +8,7 @@ public class TesteMov : MonoBehaviour
     private Rigidbody2D corpoPers;
     private Animator anim;
     private SpriteRenderer spritRend;
-    private UIManager iuManager;
+    //private UIManager iuManager;
 
     [SerializeField] private float movHorizontal;
     [SerializeField] private float velocidadeMov;
@@ -24,7 +24,7 @@ public class TesteMov : MonoBehaviour
         corpoPers = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spritRend = GetComponent<SpriteRenderer>();
-        iuManager = FindObjectOfType<UIManager>();
+       // iuManager = FindObjectOfType<UIManager>();
 
         vidasAtual = 3;
 
@@ -149,27 +149,26 @@ public class TesteMov : MonoBehaviour
         //if(invincible){
         // return;
         //}
-        if (collider.gameObject.tag == "Arbusto")
-        {
-            vidasAtual--;
-            iuManager.UpdateLives(vidasAtual);
+        //if (collider.gameObject.tag == "Arbusto")
+       // {
+           // vidasAtual--;
+           // iuManager.UpdateLives(vidasAtual);
 
             // anim.SetTrigger("Andando");
             //velocidade = (float)(velocidade - (velocidade * 0.2));
-            if (vidasAtual <= 0)
-            {
-                velocidadeMov = velocidadeMov - ((10 * velocidadeMov) / 100);
+           // if (vidasAtual <= 0)
+            //{
+               // velocidadeMov = velocidadeMov - ((10 * velocidadeMov) / 100);
 
-                GameController.insta.ShowGameOver();
-                Destroy(this.gameObject);
+               // GameController.insta.ShowGameOver();
+                //Destroy(this.gameObject);
             }
-            else
-            {
+           // else{
                 //StartCoroutine(Blinking(invincibleTime));
             }
-        }
+        //}
 
-    }
+   // }
 
 
-}
+//}
