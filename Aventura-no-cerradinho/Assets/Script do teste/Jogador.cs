@@ -7,7 +7,8 @@ public class Jogador : MonoBehaviour
     public float Speed = 8f;
     public float velobat=3f;
     
-    public float JumpForce;
+    public float jumpForce = 5f;
+    private bool isJumping = false;
     private Camera cam;
 
     public Rigidbody2D rig;
@@ -25,7 +26,13 @@ public class Jogador : MonoBehaviour
     void Update()
     {
        Move();
-       Jump();
+      float moveX = Input.GetAxis("Horizontal");
+
+       if (Input.GetButtonDown("Jump") && !isJumping)
+        {
+            rig.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            isJumping = true;
+        }
     }
 
     void Move(){
@@ -45,11 +52,8 @@ public class Jogador : MonoBehaviour
         }
 
     }
-    void Jump(){
-      if(Input.GetKeyDown(KeyCode.Space)){
-          rig.AddForce(Vector2.up*JumpForce,ForceMode2D.Impulse);
-        }
-    }
+   // void Jump(){
+   // }
 
 
      void OnTriggerEnter2D(Collider2D collider){

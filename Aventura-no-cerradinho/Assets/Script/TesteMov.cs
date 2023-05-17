@@ -9,10 +9,12 @@ public class TesteMov : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spritRend;
     //private UIManager iuManager;
+     private Camera cam;
 
     [SerializeField] private float movHorizontal;
-    [SerializeField] private float velocidadeMov;
+    [SerializeField] private float velocidadeMov=8f;
     [SerializeField] private float forcaPulo;
+    [SerializeField] private float velobat=3f;
     [SerializeField] private bool segundoPulo, conta_pulo;
 
     [SerializeField] private int vidasAtual ;
@@ -25,6 +27,7 @@ public class TesteMov : MonoBehaviour
         anim = GetComponent<Animator>();
         spritRend = GetComponent<SpriteRenderer>();
        // iuManager = FindObjectOfType<UIManager>();
+       cam=FindObjectOfType(typeof(Camera))as Camera;
 
         vidasAtual = 3;
 
@@ -145,30 +148,18 @@ public class TesteMov : MonoBehaviour
 
 
     void OnTriggerEnter2D(Collider2D collider)
-    {
-        //if(invincible){
-        // return;
-        //}
-        //if (collider.gameObject.tag == "Arbusto")
-       // {
-           // vidasAtual--;
-           // iuManager.UpdateLives(vidasAtual);
-
-            // anim.SetTrigger("Andando");
-            //velocidade = (float)(velocidade - (velocidade * 0.2));
-           // if (vidasAtual <= 0)
-            //{
-               // velocidadeMov = velocidadeMov - ((10 * velocidadeMov) / 100);
-
-               // GameController.insta.ShowGameOver();
-                //Destroy(this.gameObject);
+    { 
+         if(collider.gameObject.tag=="Arbusto"){
+              velocidadeMov =velobat;
+              cam.ShakeIt();
+              Invoke("retorno", 2f);
+           }
+        }
+        void retorno(){
+           Debug.Log("Hello World");
+           velocidadeMov=8f;
+           
+        }
+       
             }
-           // else{
-                //StartCoroutine(Blinking(invincibleTime));
-            }
-        //}
 
-   // }
-
-
-//}

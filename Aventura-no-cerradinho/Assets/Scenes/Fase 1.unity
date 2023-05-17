@@ -4898,7 +4898,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6441567268227672040, guid: e7398a8367589384197a2881eaff8aa3, type: 3}
   m_PrefabInstance: {fileID: 1875759835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1322875339
+--- !u!114 &1322875344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4907,18 +4907,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322875338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf60ff500dc78a4fb860c749ab89e7a, type: 3}
+  m_Script: {fileID: 11500000, guid: dff889d9491a81c4ab6ef637fbdb2844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
-  velobat: 3
-  JumpForce: 0
-  rig: {fileID: 1322875341}
---- !u!50 &1322875341 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6441567268227672044, guid: e7398a8367589384197a2881eaff8aa3, type: 3}
-  m_PrefabInstance: {fileID: 1875759835}
-  m_PrefabAsset: {fileID: 0}
+  movHorizontal: 0
+  velocidadeMov: 8
+  forcaPulo: 0
+  velobat: 4
+  segundoPulo: 0
+  conta_pulo: 0
+  vidasAtual: 0
 --- !u!1 &1326930815
 GameObject:
   m_ObjectHideFlags: 3
