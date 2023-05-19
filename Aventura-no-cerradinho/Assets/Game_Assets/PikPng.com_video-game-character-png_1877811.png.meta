@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -108,6 +109,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 1024
     resizeAlgorithm: 1
     textureFormat: -1
@@ -341,6 +366,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      PikPng.com_video-game-character-png_1877811_0: -8973781966695445162
+      PikPng.com_video-game-character-png_1877811_1: 7835643981664230816
+      PikPng.com_video-game-character-png_1877811_2: -4985992136743682660
+      PikPng.com_video-game-character-png_1877811_3: 9080680580154805362
+      PikPng.com_video-game-character-png_1877811_4: 6782406104547140946
+      PikPng.com_video-game-character-png_1877811_5: 4821418324545094042
+      PikPng.com_video-game-character-png_1877811_6: 2284044063001006138
+      PikPng.com_video-game-character-png_1877811_7: 8279771833200717894
+      PikPng.com_video-game-character-png_1877811_8: 3365954126546504660
+      PikPng.com_video-game-character-png_1877811_9: 1124503984801210545
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
