@@ -9,9 +9,9 @@ public class Jogador : MonoBehaviour
     
     public float jumpForce = 5f;
     private bool isJumping = false;
-    private Camera cam;
+    public Camera cam;
 
-    public Rigidbody2D rig;
+    private Rigidbody2D rig;
     private Animator anim;
     //float diretion;
   
