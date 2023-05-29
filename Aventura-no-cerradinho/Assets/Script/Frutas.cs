@@ -6,9 +6,10 @@ public class Frutas : MonoBehaviour
 {
     private SpriteRenderer sr;
     private CircleCollider2D circle;
+    public  GameObject card;
 
-   // public GameObject collected; 
-    // Start is called before the first frame update
+    private bool isPaused = false;
+
     void Start()
     {
         sr=GetComponent<SpriteRenderer>();
@@ -24,8 +25,18 @@ public class Frutas : MonoBehaviour
         if(collider.gameObject.tag=="Player"){
            sr.enabled=false;
            circle.enabled=false;
-           
            Destroy(gameObject,0.25f);
+           Pause();
+           card.SetActive(true);
         }
+    }
+    void Pause(){
+        isPaused = true;
+        Time.timeScale = 0f; 
+    }
+    public void Continuar(){
+        isPaused = false;
+        Time.timeScale = 1f;
+        card.SetActive(false);
     }
 }

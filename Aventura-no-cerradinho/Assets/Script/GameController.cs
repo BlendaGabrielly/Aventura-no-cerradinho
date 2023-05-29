@@ -30,16 +30,11 @@ public class GameController : MonoBehaviour
 
    }
 
+  
   public void teste(){
-    Debug.Log("Hello");
-    
+    Debug.Log("testeee");
   }
-
-   //public void Restart(string lvlName ){
-    public void Restart()
-    {   
-        //SceneManager.LoadScene(lvlName);
-        Debug.Log(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+  public void Restart(){
+     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  }
 }

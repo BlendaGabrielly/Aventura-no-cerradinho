@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
 
 
         if (collision.gameObject.tag == "Player") {
-            //GameController.insta.ShowGameOver();
+            GameController.insta.ShowGameOver();
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

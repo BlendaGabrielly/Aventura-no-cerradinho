@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Cenario : MonoBehaviour
 {
     public GameObject game;
@@ -14,8 +14,19 @@ public class Cenario : MonoBehaviour
     private Transform player;
     private Transform currentPlatsPoint;
     public int plataformaIndex;
+
+  //  private Vector3 initialPosition;
+   // private Quaternion initialRotation;
+   // private Vector3 initialScale;
+
+   
     void Start()
     {
+        // Armazene o estado inicial do objeto
+      //  initialPosition = transform.position;
+       // initialRotation = transform.rotation;
+       // initialScale = transform.localScale;
+
         if(GameObject.FindGameObjectWithTag("Player") != null){
             player=GameObject.FindGameObjectWithTag("Player").transform;
         for(int i=0;i<platforms.Count;i++){
@@ -27,9 +38,11 @@ public class Cenario : MonoBehaviour
        game1.SetActive(false);
        game2.SetActive(false);
        currentPlatsPoint=currentPlat[plataformaIndex].GetComponent<PointE>().point;
-        }
-        
+    
+
+        } 
     }
+
     public GameObject myplat;
     void Update(){  
         if(Input.GetKeyDown(KeyCode.A)){
@@ -50,7 +63,16 @@ public class Cenario : MonoBehaviour
     
     public void Recycle(GameObject platform){
        platform.transform.position=new Vector3(offset,0,0);
-       offset+=52;//ultima plataforma
+       offset+=52;
+       
 
     }
+  /* public void Restart()
+    {
+        // Restaure o estado inicial do objeto
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+        transform.localScale = initialScale;
+    }*/
+   
 }

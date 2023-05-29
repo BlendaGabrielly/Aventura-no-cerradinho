@@ -8,12 +8,13 @@ public class TesteMov : MonoBehaviour
     private Rigidbody2D corpoPers;
     private Animator anim;
     private SpriteRenderer spritRend;
-    private Camera cam;
+   // public Camera cam;
+   public Camera cam;
 
     [SerializeField] private float movHorizontal;
     [SerializeField] private float velocidadeMov=8f;
     [SerializeField] private float forcaPulo;
-    [SerializeField] private float velobat=3f;
+    [SerializeField] private float velobat=2f;
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool segundoPulo, conta_pulo;
 
@@ -80,7 +81,11 @@ public class TesteMov : MonoBehaviour
             estaPulando = false;
             bufferDePulo();
 
+        }if (collision.gameObject.tag == "Enemy"){
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
+
     }
     void OnCollisionExit2D(Collision2D collision){
         if (collision.gameObject.layer == 8){
