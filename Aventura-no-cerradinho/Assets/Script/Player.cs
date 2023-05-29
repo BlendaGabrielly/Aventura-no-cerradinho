@@ -7,21 +7,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float velocidade = 8f;
+    public float velobat=3f;
     public float forcaPulo = 8f;
 
     public bool estaPulando, segundoPulo;
+    private Camera camera;
 
     private Rigidbody2D rig;
     private Animator anim;
+    public Color color;
+    public GameObject perso;
 
-    public int max_life=3;
-    private int currentLife;
-    public float minspeed=10f;
-    public float maxspeed=30f;
-    private bool invincible=false;
-    static int blinkValue ;
-    public float invincibleTime;
-    private UIManager iuManager;
+   // public int max_life=3;
+    //private int currentLife;
+  //  public float minspeed=10f;
+   // public float maxspeed=30f;
+   // private bool invincible=false;
+ ///   static int blinkValue ;
+   // public float invincibleTime;
+    //private UIManager iuManager;
 
 
     // Start is called before the first frame update
@@ -30,10 +34,11 @@ public class Player : MonoBehaviour
 
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
-        currentLife=max_life; 
-        velocidade=minspeed;
-        blinkValue=Shader.PropertyToID("_BlinkingValue");
-        iuManager=FindObjectOfType<UIManager>();
+        camera=FindObjectOfType(typeof(Camera))as Camera;
+       // currentLife=max_life; 
+       // velocidade=minspeed;
+        //blinkValue=Shader.PropertyToID("_BlinkingValue");
+        //iuManager=FindObjectOfType<UIManager>();
    
 
     }
@@ -128,18 +133,27 @@ public class Player : MonoBehaviour
         //if(invincible){
            // return;
         //}
-        if(collider.gameObject.tag=="Arbusto"){
-             currentLife--;
-             iuManager.UpdateLives(currentLife);
+        //if(collider.gameObject.tag=="Arbusto"){
+             //currentLife--;
+            // iuManager.UpdateLives(currentLife);
 
             // anim.SetTrigger("Andando");
-            velocidade = (float)(velocidade - (velocidade * 0.2));
-            if (currentLife<=0){
-               GameController.insta.ShowGameOver();
-                Destroy(gameObject);
-             }else{
-               StartCoroutine(Blinking(invincibleTime));
-             }
+            //velocidade = (float)(velocidade - (velocidade * 0.2));
+           // if (currentLife<=0){
+              // GameController.insta.ShowGameOver();
+              // Destroy(gameObject);
+            // }else{
+             //  StartCoroutine(Blinking(invincibleTime));
+          //}
+           if(collider.gameObject.tag=="Arbusto"){
+              velocidade=velobat;
+              camera.ShakeIt();
+              Invoke("retorno",2f);
+           }
+        }
+        void retorno(){
+           velocidade=8f;
+           
         }
 
     }
@@ -148,7 +162,7 @@ public class Player : MonoBehaviour
     
         
        
-    IEnumerator Blinking(float time){
+   /* IEnumerator Blinking(float time){
       invincible=true;
       float timer=0;
       float currentBlinking=1f;
@@ -168,5 +182,5 @@ public class Player : MonoBehaviour
      }
      Shader.SetGlobalFloat(blinkValue,0);
      invincible=false;
-    }
-}
+    }*/
+//}

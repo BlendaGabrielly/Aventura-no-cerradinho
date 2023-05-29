@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameController : MonoBehaviour
 {
     public GameObject gameOver;
@@ -26,14 +27,14 @@ public class GameController : MonoBehaviour
 
    public void ShowGameOver(){
      gameOver.SetActive(true);
+
    }
 
-
-   //public void Restart(string lvlName ){
-    public void Restart()
-    {
-        //SceneManager.LoadScene(lvlName);
-        //Debug.Log(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+  
+  public void teste(){
+    Debug.Log("testeee");
+  }
+  public void Restart(){
+     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  }
 }
