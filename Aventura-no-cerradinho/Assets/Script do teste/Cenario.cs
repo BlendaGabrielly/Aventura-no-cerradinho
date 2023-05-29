@@ -14,19 +14,9 @@ public class Cenario : MonoBehaviour
     private Transform player;
     private Transform currentPlatsPoint;
     public int plataformaIndex;
-
-  //  private Vector3 initialPosition;
-   // private Quaternion initialRotation;
-   // private Vector3 initialScale;
-
    
     void Start()
     {
-        // Armazene o estado inicial do objeto
-      //  initialPosition = transform.position;
-       // initialRotation = transform.rotation;
-       // initialScale = transform.localScale;
-
         if(GameObject.FindGameObjectWithTag("Player") != null){
             player=GameObject.FindGameObjectWithTag("Player").transform;
         for(int i=0;i<platforms.Count;i++){
