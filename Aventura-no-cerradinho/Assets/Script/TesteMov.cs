@@ -21,6 +21,7 @@ public class TesteMov : MonoBehaviour
     [SerializeField] private int vidasAtual ;
     private bool estaPulando;
 
+
     void Start()
     {
         corpoPers = GetComponent<Rigidbody2D>();
@@ -77,13 +78,14 @@ public class TesteMov : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.layer == 8){
-            Debug.Log("Bati no chão");
+            //Debug.Log("Bati no chão");
             estaPulando = false;
             bufferDePulo();
 
         }if (collision.gameObject.tag == "Enemy"){
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            //Destroy(gameObject);
+            GameController.insta.ShowGameOver();
+            //Destroy(collision.gameObject);
         }
 
     }
@@ -99,11 +101,27 @@ public class TesteMov : MonoBehaviour
               cam.ShakeIt();
               Invoke("retorno", 2f);
            }      
-         if(collider.gameObject.tag=="Caju"){
-              velocidadeMov =velocidadeMov*2;
-              Invoke("retorno", 2f);
-           }
+        // if(collider.gameObject.tag=="Caju"){
+         //     velocidadeMov =velocidadeMov*2;
+          //    Invoke("retorno", 2f);
+          // }
+
+        if(collider.gameObject.tag=="Caju"){
+           int quantidadeCajus = GameObject.FindGameObjectsWithTag("Caju").Length;
+
+            if (quantidadeCajus > 2)
+            {
+                // Ação a ser executada quando há mais de 2 cajus
+                Debug.Log("Há mais de 2 cajus!");
+                velocidadeMov = 8f;
+            }
+            if (quantidadeCajus < 2){
+                velocidadeMov =velocidadeMov*2;
+                Invoke("retorno", 2f);  
+            }
+        }
     }
+
     void retorno(){
            velocidadeMov=8f;
         }     

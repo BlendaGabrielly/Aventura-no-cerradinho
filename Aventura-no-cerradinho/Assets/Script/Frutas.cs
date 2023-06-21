@@ -13,12 +13,18 @@ public class Frutas : MonoBehaviour
     void Start()
     {
         sr=GetComponent<SpriteRenderer>();
+        sr.enabled=true;
+        
         circle=GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.C)){
+            Continuar();
+            Debug.Log("Teste");
+        }
         
     }
     void OnTriggerEnter2D(Collider2D collider){

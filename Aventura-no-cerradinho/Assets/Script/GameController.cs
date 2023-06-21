@@ -9,28 +9,19 @@ public class GameController : MonoBehaviour
     public GameObject gameOver;
     public static GameController insta;
 
-  
-    // Start is called before the first frame update
     void Start()
     {
         
          insta=this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
-
-
-
    public void ShowGameOver(){
      gameOver.SetActive(true);
-
    }
-
-  
   public void teste(){
     Debug.Log("testeee");
   }

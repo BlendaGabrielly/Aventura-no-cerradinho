@@ -57,12 +57,5 @@ public class Cenario : MonoBehaviour
        
 
     }
-  /* public void Restart()
-    {
-        // Restaure o estado inicial do objeto
-        transform.position = initialPosition;
-        transform.rotation = initialRotation;
-        transform.localScale = initialScale;
-    }*/
    
 }

@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
  private Transform Target;
 
     private BoxCollider2D Onca, madeiraCollider;
-   // public float Stop;
+
 
     
     void Start()
@@ -37,8 +37,8 @@ public class Enemy : MonoBehaviour
 
         if (collision.gameObject.tag == "Player") {
             GameController.insta.ShowGameOver();
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+           // Destroy(gameObject);
+          //  Destroy(collision.gameObject);
         }
      }
      
