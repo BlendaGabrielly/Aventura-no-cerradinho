@@ -17,8 +17,9 @@ public class TesteMov : MonoBehaviour
     [SerializeField] private float velobat=2f;
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool segundoPulo, conta_pulo;
-
     [SerializeField] private int vidasAtual ;
+    int quantidadeCajus = 0;
+
     private bool estaPulando;
 
 
@@ -27,7 +28,7 @@ public class TesteMov : MonoBehaviour
         corpoPers = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spritRend = GetComponent<SpriteRenderer>();
-        cam=FindObjectOfType(typeof(Camera))as Camera;
+        cam = FindObjectOfType(typeof(Camera))as Camera;
 
         vidasAtual = 3;
 
@@ -107,18 +108,19 @@ public class TesteMov : MonoBehaviour
           // }
 
         if(collider.gameObject.tag=="Caju"){
-           int quantidadeCajus = GameObject.FindGameObjectsWithTag("Caju").Length;
+           quantidadeCajus = quantidadeCajus + 1;
+
+            velocidadeMov = velocidadeMov*2;
+            Invoke("retorno", 2f); 
+            Debug.Log("pegou caju: " + quantidadeCajus); 
 
             if (quantidadeCajus > 2)
             {
-                // Ação a ser executada quando há mais de 2 cajus
-                Debug.Log("Há mais de 2 cajus!");
-                velocidadeMov = 8f;
+                Debug.Log("pegou caju, entrou no if");
+                retorno();
+                quantidadeCajus = 0;
             }
-            if (quantidadeCajus < 2){
-                velocidadeMov =velocidadeMov*2;
-                Invoke("retorno", 2f);  
-            }
+            
         }
     }
 

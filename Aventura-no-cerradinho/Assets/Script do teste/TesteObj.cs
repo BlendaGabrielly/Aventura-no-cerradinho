@@ -30,7 +30,7 @@ public class TesteObj : MonoBehaviour
 
     void InstanciarObjeto()
     {
-        Debug.Log("entrou");
+        //Debug.Log("entrou");
         //float posX = point.transform.position.x;
         // Instanciar objeto em posição aleatória
         Vector3 posicaoAleatoria = new Vector3(
@@ -38,6 +38,7 @@ public class TesteObj : MonoBehaviour
             Random.Range(limiteMin.y, limiteMax.y),
             Random.Range(limiteMin.z, limiteMax.z));
         Instantiate(objetoPrefab, posicaoAleatoria, Quaternion.identity);
+        Destroy(objetoPrefab, 5f);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
