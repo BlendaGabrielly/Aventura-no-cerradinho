@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject gameOver;
     public static GameController insta;
+    private bool isPaused = false;
 
     void Start()
     {
@@ -21,11 +22,14 @@ public class GameController : MonoBehaviour
     }
    public void ShowGameOver(){
      gameOver.SetActive(true);
+     Pause();
    }
-  public void teste(){
-    Debug.Log("testeee");
-  }
-  public void Restart(){
+    public void Restart(){
      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+     Debug.Log("Clicavel");
   }
+    void Pause(){
+        isPaused = true;
+        Time.timeScale = 0f; 
+    }
 }
